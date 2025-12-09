@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking | Scrub-A-Dog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="split-header">
+    <div class="header-left">
+      <h1 class="logo">Scrub-A-Dog</h1>
+      <p class="tagline">Clean Pets. Clean Owners.</p>
+    </div>
+    <nav class="header-right navbar">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+   <section class="dog-banner">
+    <img src="images/dog-banner.jpg" alt="Groomed dogs lineup" />
+  </section>
+
+  <main class="main-content">
+    <section class="booking-form">
+      <h2>Book an Appointment</h2>
+      <form>
+        <fieldset>
+          <legend>Customer Information</legend>
+          <label>First Name:<input type="text" name="firstName" required /></label>
+          <label>Last Name:<input type="text" name="lastName" required /></label>
+          <label>Pet's Name:<input type="text" name="petName" required /></label>
+          <label>Email:<input type="email" name="email" required /></label>
+          <label>Phone:<input type="tel" name="phone" required /></label>
+          <label>Date:<input type="date" name="date" required /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Service Request</legend>
+          <label>I would like the following service:</label>
+          <label><input type="radio" name="service" value="Basic Groom" required /> Basic Groom</label>
+          <label><input type="radio" name="service" value="Full Groom" /> Full Groom</label>
+          <label><input type="radio" name="service" value="Pampered Groom" /> Pampered Groom</label>
+
+          <label>Preferred Groomer:
+            <select name="groomer">
+              <option value="none">No preference</option>
+              <option value="groomer1">Groomer 1</option>
+              <option value="groomer2">Groomer 2</option>
+            </select>
+          </label>
+
+          <label>Special requests or instructions:
+            <textarea name="instructions" rows="4"></textarea>
+          </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 Scrub-A-Dog. All Rights Reserved.</p>
+    <p>contact@polipaws.net</p>
+  </footer>
+</body>
+</html>

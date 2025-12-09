@@ -1,0 +1,400 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #1e293b;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Split header layout */
+.split-header {
+  display: flex;
+  width: 100%;
+  height: 140px;
+}
+
+.header-left {
+  flex-basis: 25%;
+  min-width: 280px;
+  background-color: #93c5fd;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-style: italic;
+  color: #1e3a8a;
+  margin-top: 6px;
+}
+
+.header-right {
+  flex: 1;
+  background-color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px;
+  position: relative;
+}
+
+/* Hamburger toggle */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Navigation menu (desktop) */
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background-color: #1e3a8a;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dog banner */
+.dog-banner {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dog-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+/* Body content */
+.main-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.promo-text {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.promo-text .latin {
+  font-size: 1rem;
+  font-style: italic;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.promo-text .english {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  font-weight: 600;
+  border-left: 4px solid #93c5fd;
+  padding-left: 12px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 24px;
+  font-size: 1rem;
+}
+
+.site-footer p {
+  margin: 6px 0;
+}
+
+/* Grooming Packages */
+.groom-packages {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.groom-packages h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.package {
+  margin-bottom: 40px;
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.package img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.package h3 {
+  font-size: 1.4rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.package ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #334155;
+}
+
+/* Grooming Rates */
+.groom-rates {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.groom-rates h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.groom-rates table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f8fafc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.groom-rates th,
+.groom-rates td {
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.groom-rates th {
+  background-color: #93c5fd;
+  color: #1e3a8a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .split-header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background-color: #B7EAFA; /* light background below header */
+    padding: 20px 0;
+    gap: 16px;
+    width: 100%;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .nav-menu a {
+    color: #1e3a8a;
+  }
+
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  .package img {
+    max-height: 200px;
+  }
+}
+
+
+.booking-form {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.booking-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.booking-form form {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.booking-form legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.booking-form button {
+  align-self: center;
+  background-color: #1e3a8a;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.booking-form button:hover {
+  background-color: #3b82f6;
+}
+
+.contact-info {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.contact-info a {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+.map-embed {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.map-embed h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
